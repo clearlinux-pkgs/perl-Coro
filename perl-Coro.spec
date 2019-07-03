@@ -4,7 +4,7 @@
 #
 Name     : perl-Coro
 Version  : 6.54
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.54.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.54.tar.gz
 Summary  : unknown
@@ -12,6 +12,13 @@ Group    : Development/Tools
 License  : Artistic-1.0-Perl BSD-2-Clause GPL-2.0
 Requires: perl-Coro-lib = %{version}-%{release}
 Requires: perl-Coro-license = %{version}-%{release}
+Requires: perl(AnyEvent)
+Requires: perl(AnyEvent::Util)
+Requires: perl(Canary::Stability)
+Requires: perl(Guard)
+Requires: perl(Scalar::Util)
+Requires: perl(Storable)
+Requires: perl(common::sense)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(AnyEvent)
 BuildRequires : perl(AnyEvent::Util)
