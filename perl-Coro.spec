@@ -4,16 +4,17 @@
 #
 Name     : perl-Coro
 Version  : 6.54
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.54.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.54.tar.gz
 Summary  : unknown
 Group    : Development/Tools
 License  : Artistic-1.0-Perl BSD-2-Clause GPL-2.0
 Requires: perl-Coro-lib = %{version}-%{release}
-Requires: perl-Coro-license = %{version}-%{release}
 Requires: perl(AnyEvent)
+Requires: perl(AnyEvent::AIO)
 Requires: perl(AnyEvent::Util)
+Requires: perl(BDB)
 Requires: perl(Canary::Stability)
 Requires: perl(Guard)
 Requires: perl(Scalar::Util)
@@ -65,18 +66,9 @@ dev components for the perl-Coro package.
 %package lib
 Summary: lib components for the perl-Coro package.
 Group: Libraries
-Requires: perl-Coro-license = %{version}-%{release}
 
 %description lib
 lib components for the perl-Coro package.
-
-
-%package license
-Summary: license components for the perl-Coro package.
-Group: Default
-
-%description license
-license components for the perl-Coro package.
 
 
 %prep
@@ -104,8 +96,6 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/perl-Coro
-cp Coro/libcoro/LICENSE %{buildroot}/usr/share/package-licenses/perl-Coro/Coro_libcoro_LICENSE
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -125,6 +115,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Channel.pm
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/CoroAPI.h
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Debug.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/EV.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Event.pm
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Handle.pm
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Intro.pod
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/LWP.pm
@@ -151,6 +143,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Coro::BDB.3
 /usr/share/man/man3/Coro::Channel.3
 /usr/share/man/man3/Coro::Debug.3
+/usr/share/man/man3/Coro::EV.3
+/usr/share/man/man3/Coro::Event.3
 /usr/share/man/man3/Coro::Handle.3
 /usr/share/man/man3/Coro::Intro.3
 /usr/share/man/man3/Coro::LWP.3
@@ -169,8 +163,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files lib
 %defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Coro/EV/EV.so
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Coro/Event/Event.so
 /usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Coro/State/State.so
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Coro/Coro_libcoro_LICENSE

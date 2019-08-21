@@ -2,7 +2,9 @@
 # picked up automatically. One name per line, no whitespace.
 perl(common::sense)
 perl(AnyEvent)
+perl(AnyEvent::AIO)
 perl(AnyEvent::Util)
+perl(BDB)
 perl(Canary::Stability)
 perl(Guard)
 perl(Scalar::Util)
