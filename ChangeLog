@@ -8,6 +8,12 @@ TODO: croak when async_pool tries to run canceled thread?
 TODO: how to debug safe_cancel failure (vebrose mode? show how to make backtrace?)
 TODO: scalar context for Coro::AIO wrappers?
 
+6.55  Fri Jul 19 17:28:09 CEST 2019
+	- Coro::RWLock woke up only one reader instead of all after a wrlock
+          (analyzed and patch by Maxim Skorobogatov).
+        - slightly improved documentation of Coro::RWLock and RWLock testcase.
+        - quickly (re)-ported to minix 3.3 before minix crashed again.
+
 6.54  Sun Dec 16 11:06:07 CET 2018
 	- reinstate Coro::Select::select prototype - it breaks more than it fixes.
 
