@@ -1,0 +1,3 @@
+# Get rid of #!/opt/bin/perl
+
+find . -type f -exec sed -s -i '1s|^#!/opt/bin/perl|#!/usr/bin/perl|' {} +

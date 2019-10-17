@@ -4,10 +4,10 @@
 #
 Name     : perl-Coro
 Version  : 6.55
-Release  : 4
+Release  : 5
 URL      : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.55.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.55.tar.gz
-Summary  : CPAN/Coro - the only real threads in perl
+Summary  : unknown
 Group    : Development/Tools
 License  : Artistic-1.0-Perl BSD-2-Clause GPL-2.0
 Requires: perl-Coro-lib = %{version}-%{release}
@@ -59,7 +59,6 @@ Group: Development
 Requires: perl-Coro-lib = %{version}-%{release}
 Provides: perl-Coro-devel = %{version}-%{release}
 Requires: perl-Coro = %{version}-%{release}
-Requires: perl-Coro = %{version}-%{release}
 
 %description dev
 dev components for the perl-Coro package.
@@ -86,6 +85,9 @@ license components for the perl-Coro package.
 %setup -q -n Coro-6.55
 
 %build
+## build_prepend content
+find . -type f -exec sed -s -i '1s|^#!/opt/bin/perl|#!/usr/bin/perl|' {} +
+## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -108,7 +110,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Coro
-cp Coro/libcoro/LICENSE %{buildroot}/usr/share/package-licenses/perl-Coro/Coro_libcoro_LICENSE
+cp %{_builddir}/Coro-6.55/Coro/libcoro/LICENSE %{buildroot}/usr/share/package-licenses/perl-Coro/40a2be7ced057c47d12a095fb029d4c19c790f5b
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -182,4 +184,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Coro/Coro_libcoro_LICENSE
+/usr/share/package-licenses/perl-Coro/40a2be7ced057c47d12a095fb029d4c19c790f5b
