@@ -1,3 +1,7 @@
 # Get rid of #!/opt/bin/perl
 
 find . -type f -exec sed -s -i '1s|^#!/opt/bin/perl|#!/usr/bin/perl|' {} +
+
+# Avoid being prompted by ExtUtils::MakeMaker or Canary::Stability
+export PERL_MM_USE_DEFAULT=1
+export PERL_CANARY_STABILITY_NOPROMPT=1

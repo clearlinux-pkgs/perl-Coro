@@ -3,6 +3,7 @@
 perl(common::sense)
 perl(AnyEvent)
 perl(AnyEvent::AIO)
+perl(AnyEvent::BDB)
 perl(AnyEvent::Util)
 perl(BDB)
 perl(Canary::Stability)
