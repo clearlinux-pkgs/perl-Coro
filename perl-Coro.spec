@@ -4,7 +4,7 @@
 #
 Name     : perl-Coro
 Version  : 6.55
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.55.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.55.tar.gz
 Summary  : unknown
@@ -18,6 +18,8 @@ Requires: perl(AnyEvent::BDB)
 Requires: perl(AnyEvent::Util)
 Requires: perl(BDB)
 Requires: perl(Canary::Stability)
+Requires: perl(EV)
+Requires: perl(Event)
 Requires: perl(Guard)
 Requires: perl(Scalar::Util)
 Requires: perl(Storable)
@@ -26,6 +28,8 @@ BuildRequires : buildreq-cpan
 BuildRequires : perl(AnyEvent)
 BuildRequires : perl(AnyEvent::Util)
 BuildRequires : perl(Canary::Stability)
+BuildRequires : perl(EV)
+BuildRequires : perl(Event)
 BuildRequires : perl(Guard)
 BuildRequires : perl(common::sense)
 
@@ -87,7 +91,11 @@ cd %{_builddir}/Coro-6.55
 
 %build
 ## build_prepend content
+# Get rid of #!/opt/bin/perl
+
 find . -type f -exec sed -s -i '1s|^#!/opt/bin/perl|#!/usr/bin/perl|' {} +
+
+# Avoid being prompted by ExtUtils::MakeMaker or Canary::Stability
 export PERL_MM_USE_DEFAULT=1
 export PERL_CANARY_STABILITY_NOPROMPT=1
 ## build_prepend end
