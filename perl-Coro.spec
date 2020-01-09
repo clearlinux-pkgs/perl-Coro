@@ -4,7 +4,7 @@
 #
 Name     : perl-Coro
 Version  : 6.55
-Release  : 7
+Release  : 8
 URL      : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.55.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.55.tar.gz
 Summary  : unknown
@@ -167,32 +167,32 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/AIO.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/AnyEvent.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/BDB.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Channel.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/CoroAPI.h
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Debug.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/EV.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Event.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Handle.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Intro.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/LWP.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/MakeMaker.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/RWLock.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Select.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Semaphore.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/SemaphoreSet.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Signal.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Socket.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Specific.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/State.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Storable.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Timer.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/Util.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/jit-amd64-unix.pl
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Coro/jit-x86-unix.pl
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Coro/EV/EV.so
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Coro/Event/Event.so
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Coro/State/State.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/AIO.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/AnyEvent.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/BDB.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Channel.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/CoroAPI.h
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Debug.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/EV.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Event.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Handle.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Intro.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/LWP.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/MakeMaker.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/RWLock.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Select.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Semaphore.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/SemaphoreSet.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Signal.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Socket.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Specific.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/State.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Storable.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Timer.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/Util.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/jit-amd64-unix.pl
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Coro/jit-x86-unix.pl
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Coro/EV/EV.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Coro/Event/Event.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Coro/State/State.so
