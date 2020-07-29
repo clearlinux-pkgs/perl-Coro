@@ -1,6 +1,5 @@
-6.55
+6.57
 perl(AnyEvent)
-perl(AnyEvent::Util)
 perl(Canary::Stability)
 perl(Guard)
 perl(common::sense)

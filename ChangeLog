@@ -8,6 +8,25 @@ TODO: croak when async_pool tries to run canceled thread?
 TODO: how to debug safe_cancel failure (vebrose mode? show how to make backtrace?)
 TODO: scalar context for Coro::AIO wrappers?
 
+TODO: State.xs could short-circuit some macros such as CORO_EXECUTE_SLF
+TODO: use frame->destroy to improve Coro::EV
+
+6.57  Wed Jul 29 15:08:44 CEST 2020
+	- override AnyEvent condvar methods "properly", as AnyEvent
+          has support for pluggable condvars since 2011. This also
+          avoids problems with recursive waits by avoiding to mix
+          impl methods with coro code.
+	- allow rouse_wait to be called in a different thread.
+        - slightly clarify rouse_cb/rouse_wait documentation.
+	- slightly improve rouse callback performance and memory usage.
+        - try to report correct calller when throwing exception in
+          on $condvar->recv, not a useless line in Coro::AnyEvent.
+
+6.56  Thu Feb 20 19:40:07 CET 2020
+	- Coro::EV::time*once functions used ev_once, which is not cancelable.
+          This could cause problems due to I/O watchers not being stopped up
+          on exceptions/cancellation.
+
 6.55  Fri Jul 19 17:28:09 CEST 2019
 	- Coro::RWLock woke up only one reader instead of all after a wrlock
           (analyzed and patch by Maxim Skorobogatov).
