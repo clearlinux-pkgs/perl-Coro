@@ -4,7 +4,7 @@
 #
 Name     : perl-Coro
 Version  : 6.57
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.57.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.57.tar.gz
 Summary  : unknown
